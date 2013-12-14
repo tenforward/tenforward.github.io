@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[TenForward]]></title>
+  <link href="http://tenforward.github.io/atom.xml" rel="self"/>
+  <link href="http://tenforward.github.io/"/>
+  <updated>2013-12-15T00:06:03+09:00</updated>
+  <id>http://tenforward.github.io/</id>
+  <author>
+    <name><![CDATA[tenforward]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Test Post]]></title>
+    <link href="http://tenforward.github.io/blog/2013/12/14/test-post/"/>
+    <updated>2013-12-14T22:18:24+09:00</updated>
+    <id>http://tenforward.github.io/blog/2013/12/14/test-post</id>
+    <content type="html"><![CDATA[<p>テストです．</p>
+
+<blockquote><p>引用</p></blockquote>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;Hello, World&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+</feed>
