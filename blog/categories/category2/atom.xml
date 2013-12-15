@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Category2 | TenForward]]></title>
   <link href="http://tenforward.github.io/blog/categories/category2/atom.xml" rel="self"/>
   <link href="http://tenforward.github.io/"/>
-  <updated>2013-12-15T00:28:39+09:00</updated>
+  <updated>2013-12-16T01:12:28+09:00</updated>
   <id>http://tenforward.github.io/</id>
   <author>
     <name><![CDATA[tenforward]]></name>
@@ -25,6 +25,13 @@
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Hello</span><span class="p">,</span> <span class="no">World</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><img src="/images/sbb.jpg"></p>
+
+<ul>
+<li>HTML</li>
+</ul>
+
 ]]></content>
   </entry>
   
