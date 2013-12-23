@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>TenForward</title>
+  <title>Raspberry Pi を無線 LAN アクセスポイントに - TenForward</title>
   <meta name="author" content="tenforward">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tenforward.github.io">
+  <link rel="canonical" href="http://tenforward.github.io/blog/2013/12/24/hostapd">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="TenForward" type="application/atom+xml">
@@ -63,15 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/12/24/hostapd/">Raspberry Pi を無線 LAN アクセスポイントに</a></h1>
+      <h1 class="entry-title">Raspberry Pi を無線 LAN アクセスポイントに</h1>
     
     
       <p class="meta">
@@ -94,7 +91,7 @@
   </header>
 
 
-  <div class="entry-content"><p>自宅には Buffalo の無線 LAN ルーターがあって，それをアクセスポイント (以降 AP) として使っているのですが，とある理由でもう 1 つ別の AP を置こうということになり，丁度余っていた Raspberry Pi を AP に仕立てる事にしました．</p>
+<div class="entry-content"><p>自宅には Buffalo の無線 LAN ルーターがあって，それをアクセスポイント (以降 AP) として使っているのですが，とある理由でもう 1 つ別の AP を置こうということになり，丁度余っていた Raspberry Pi を AP に仕立てる事にしました．</p>
 
 <p>同じ内容を扱うブログエントリは検索すると多数出てきますので，これは単なる個人用メモ代わりに近いです．検索で出てくる多くの内容は無線 LAN 側にアドレスを割り当てて iptables で NAT するパターンが多いですが，自宅だと既に NAT がかかっている事が多く，さらに NAT する意味があまり感じられないので，単なるブリッジとして設定してみました．</p>
 
@@ -224,18 +221,57 @@ br0     8000.b0c74546d440   no      eth0
 
 <p>こんな感じで br0 にアタッチされてます．Android 4.1, iOS 7, Mac OS 10.9 で接続できました．</p>
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">tenforward</span></span>
+
+      
+
+
+
+
+
+
+
+
   
 
 
-    </article>
+<time datetime="2013-12-24T00:13:10+09:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+      
+
+<span class="categories">
   
-  <div class="pagination">
+    <a class='category' href='/blog/categories/raspberrypi/'>RaspberryPi</a>
+  
+</span>
+
+
+    </p>
     
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tenforward.github.io/blog/2013/12/24/hostapd/" data-via="ten_forward" data-counturl="http://tenforward.github.io/blog/2013/12/24/hostapd/" >Tweet</a>
+  
+  
+  
 </div>
+
+    
+    <p class="meta">
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -258,6 +294,7 @@ br0     8000.b0c74546d440   no      eth0
 
   
 </aside>
+
 
     </div>
   </div>
