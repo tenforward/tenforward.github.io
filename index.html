@@ -216,9 +216,10 @@ wpa_pairwise=CCMP
 <p>サービスを起動させると</p>
 
 <pre>
-root@raspberrypi:/etc/hostapd# brctl show
+root@raspberrypi:/etc/cron.d# brctl show
 bridge name bridge id       STP enabled interfaces
 br0     8000.b0c74546d440   no      eth0
+                            wlan0
 </pre>
 
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: RaspberryPi | TenForward]]></title>
   <link href="http://tenforward.github.io/blog/categories/raspberrypi/atom.xml" rel="self"/>
   <link href="http://tenforward.github.io/"/>
-  <updated>2013-12-24T01:50:02+09:00</updated>
+  <updated>2013-12-25T02:38:39+09:00</updated>
   <id>http://tenforward.github.io/</id>
   <author>
     <name><![CDATA[tenforward]]></name>
@@ -140,9 +140,10 @@ wpa_pairwise=CCMP
 <p>サービスを起動させると</p>
 
 <pre>
-root@raspberrypi:/etc/hostapd# brctl show
+root@raspberrypi:/etc/cron.d# brctl show
 bridge name bridge id       STP enabled interfaces
 br0     8000.b0c74546d440   no      eth0
+                            wlan0
 </pre>
 
 
