@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TLS | TenForward]]></title>
   <link href="http://tenforward.github.io/blog/categories/tls/atom.xml" rel="self"/>
   <link href="http://tenforward.github.io/"/>
-  <updated>2015-03-19T15:14:02+09:00</updated>
+  <updated>2015-03-19T15:15:43+09:00</updated>
   <id>http://tenforward.github.io/</id>
   <author>
     <name><![CDATA[tenforward]]></name>
@@ -47,7 +47,7 @@
 </ol>
 
 
-<p>終わりです。ただし、この認証局証明書がない場合もあるようです。新しくFirefoxのProfileを作ってみるとありませんでした。ずっとProfileを使い続けているとあるものなのかも知れません。以下のように前述の画像と比べるとStartComの証明書の数が全然違います。</p>
+<p>終わりです。ただし、この認証局証明書がない場合もあるようです。新しくFirefoxのProfileを作ってみるとありませんでした。ずっとProfileを使い続けているとあるものなのかも知れません。以下のように前述の画像と比べるとStartComの証明書の数が全然違います。問題となる証明書がない場合は正常に認証されるのでしょう。</p>
 
 <p><img src="/images/startssl/startcom3.png"></p>
 
