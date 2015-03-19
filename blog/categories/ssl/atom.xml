@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: SSL | TenForward]]></title>
+  <link href="http://tenforward.github.io/blog/categories/ssl/atom.xml" rel="self"/>
+  <link href="http://tenforward.github.io/"/>
+  <updated>2015-03-19T14:58:34+09:00</updated>
+  <id>http://tenforward.github.io/</id>
+  <author>
+    <name><![CDATA[tenforward]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[StartSSLのクライアント証明書の認証がエラーになる]]></title>
+    <link href="http://tenforward.github.io/blog/2015/03/19/startssl-problem/"/>
+    <updated>2015-03-19T14:26:33+09:00</updated>
+    <id>http://tenforward.github.io/blog/2015/03/19/startssl-problem</id>
+    <content type="html"><![CDATA[<p><a href="https://www.startssl.com/">StartSSL</a>では、証明書の発行などの処理を行う場合はクライアント証明書による認証でログインして色々な処理を行いますが、有効な証明書をブラウザにインストールしているのに、なぜかエラーになっていたので少し調べてみました。</p>
+
+<ul>
+<li><a href="http://kijitora.sabatora.info/wordpress/archives/319">「StartComからクライアント証明書を調達する」</a> (SiTE Arinko)</li>
+</ul>
+
+
+<p>にあるのと同じエラーでした。</p>
+
+<p><img src="/images/startssl/startcom4.png"></p>
+
+<p>解決方法は実は以下に書いてあるので、それを見れば終わりです。</p>
+
+<ul>
+<li><a href="https://forum.startcom.org/viewtopic.php?f=15&amp;t=15794&amp;p=21375">HOWTO: Login issues</a> (Official StartCom Public User Forum)</li>
+</ul>
+
+
+<h2>Firefox の場合</h2>
+
+<p>一応、firefox の場合を書いておきます。</p>
+
+<ol>
+<li>まずは証明書マネージャを開きます。<br/><img src="/images/startssl/startcom1.png"></li>
+<li>認証局の証明書でStartComのモノのうち以下の画像のようなモノを探します。証明書のCNが"StartCom Certification Authority"で、発行者のCNが"StartCom Certification Authority G2"となっているものです。<br/><img src="/images/startssl/startcom2.png"></li>
+<li>これを消去します。</li>
+</ol>
+
+
+<p>終わりです。ただし、この認証局証明書がない場合もあるようです。新しくFirefoxのProfileを作ってみるとありませんでした。ずっとProfileを使い続けているとあるものなのかも知れません。以下のように前述の画像と比べるとStartComの証明書の数が全然違います。</p>
+
+<p><img src="/images/startssl/startcom3.png"></p>
+
+<h2>Chrome (Linux) の場合</h2>
+
+<p>Linux 版 Chrome でも証明書マネージャから同じ証明書を探して消去すれば OK でした。</p>
+
+<p><img src="/images/startssl/startcom7.png"></p>
+
+<h2>Windows (IE/Chrome) の場合</h2>
+
+<p>Windows でも同じエラーになりました。</p>
+
+<p><img src="/images/startssl/startcom5.png"><br/>(IE)</p>
+
+<p><img src="/images/startssl/startcom6.png"><br/>(Chrome)</p>
+
+<p>Windows の証明書ストアを開いて見ましたが、先の HOWTO のように「中間証明機関」のところにも「信頼されたルート証明機関」のところにも目的の証明書を見つけられませんでした。</p>
+
+<p>見つかれば消去すれば良いようですが…</p>
+]]></content>
+  </entry>
+  
+</feed>
