@@ -4,7 +4,7 @@
   <title><![CDATA[Category: PKI | TenForward]]></title>
   <link href="http://tenforward.github.io/blog/categories/pki/atom.xml" rel="self"/>
   <link href="http://tenforward.github.io/"/>
-  <updated>2015-03-19T15:06:17+09:00</updated>
+  <updated>2015-03-19T15:12:53+09:00</updated>
   <id>http://tenforward.github.io/</id>
   <author>
     <name><![CDATA[tenforward]]></name>
@@ -27,7 +27,7 @@
 
 <p>にあるのと同じエラーでした。</p>
 
-<p><img src="/images/startssl/startcom4.png"></p>
+<p><img src="/images/startssl/startcom1.png"></p>
 
 <p>解決方法は実は以下に書いてあるので、それを見れば終わりです。</p>
 
@@ -41,7 +41,7 @@
 <p>一応、firefox の場合を書いておきます。</p>
 
 <ol>
-<li>まずは証明書マネージャを開きます。<br/><img src="/images/startssl/startcom1.png"></li>
+<li>まずは証明書マネージャを開きます。<br/><img src="/images/startssl/startcom4.png"></li>
 <li>認証局の証明書でStartComのモノのうち以下の画像のようなモノを探します。証明書のCNが"StartCom Certification Authority"で、発行者のCNが"StartCom Certification Authority G2"となっているものです。<br/><img src="/images/startssl/startcom2.png"></li>
 <li>これを消去します。</li>
 </ol>
