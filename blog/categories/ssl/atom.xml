@@ -4,7 +4,7 @@
   <title><![CDATA[Category: SSL | TenForward]]></title>
   <link href="http://tenforward.github.io/blog/categories/ssl/atom.xml" rel="self"/>
   <link href="http://tenforward.github.io/"/>
-  <updated>2015-03-19T14:58:34+09:00</updated>
+  <updated>2015-03-19T15:06:17+09:00</updated>
   <id>http://tenforward.github.io/</id>
   <author>
     <name><![CDATA[tenforward]]></name>
@@ -18,7 +18,7 @@
     <link href="http://tenforward.github.io/blog/2015/03/19/startssl-problem/"/>
     <updated>2015-03-19T14:26:33+09:00</updated>
     <id>http://tenforward.github.io/blog/2015/03/19/startssl-problem</id>
-    <content type="html"><![CDATA[<p><a href="https://www.startssl.com/">StartSSL</a>では、証明書の発行などの処理を行う場合はクライアント証明書による認証でログインして色々な処理を行いますが、有効な証明書をブラウザにインストールしているのに、なぜかエラーになっていたので少し調べてみました。</p>
+    <content type="html"><![CDATA[<p><a href="https://www.startssl.com/">StartSSL</a>では、証明書の発行などの処理を行う場合はクライアント証明書による認証でログインして色々な処理を行いますが、<strong>有効な証明書をブラウザにインストールしているのに</strong>、なぜかエラーになっていたので少し調べてみました。</p>
 
 <ul>
 <li><a href="http://kijitora.sabatora.info/wordpress/archives/319">「StartComからクライアント証明書を調達する」</a> (SiTE Arinko)</li>
