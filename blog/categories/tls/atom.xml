@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TLS | TenForward]]></title>
   <link href="http://tenforward.github.io/blog/categories/tls/atom.xml" rel="self"/>
   <link href="http://tenforward.github.io/"/>
-  <updated>2015-03-20T16:48:39+09:00</updated>
+  <updated>2015-03-20T16:51:31+09:00</updated>
   <id>http://tenforward.github.io/</id>
   <author>
     <name><![CDATA[tenforward]]></name>
@@ -52,7 +52,7 @@ lrwxrwxrwx 1 karma users     6  3月 19日  17:35 ae8153b9.0 -&gt; ca.pem
 
 <h2>正常な場合</h2>
 
-<p>まずは StartSSL で発行した証明書で Firefox からもアクセスできている場合を試してみましょう。</p>
+<p>まずは StartSSL で発行した証明書で Firefox からもアクセスできている証明書で試してみましょう。</p>
 
 <p>```
 $ openssl ocsp \</p>
