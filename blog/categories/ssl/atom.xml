@@ -4,7 +4,7 @@
   <title><![CDATA[Category: SSL | TenForward]]></title>
   <link href="http://tenforward.github.io/blog/categories/ssl/atom.xml" rel="self"/>
   <link href="http://tenforward.github.io/"/>
-  <updated>2015-03-20T16:51:31+09:00</updated>
+  <updated>2015-03-20T16:53:11+09:00</updated>
   <id>http://tenforward.github.io/</id>
   <author>
     <name><![CDATA[tenforward]]></name>
@@ -85,7 +85,7 @@ Next Update: Mar 21 06:01:44 2015 GMT
 
 <h2>発行直後のもの</h2>
 
-<p>上記と同様にやってみます。</p>
+<p>発行直後で Firefox でアクセスするとエラーになる証明書で上記と同様にやってみます。</p>
 
 <p>```
 $ openssl ocsp \</p>
