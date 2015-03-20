@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>TenForward</title>
+  <title>StartSSLの発行直後の証明書とOCSP - TenForward</title>
   <meta name="author" content="tenforward">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tenforward.github.io">
+  <link rel="canonical" href="http://tenforward.github.io/blog/2015/03/20/startssl-ocsp">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="TenForward" type="application/atom+xml">
@@ -63,15 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2015/03/20/startssl-ocsp/">StartSSLの発行直後の証明書とOCSP</a></h1>
+      <h1 class="entry-title">StartSSLの発行直後の証明書とOCSP</h1>
     
     
       <p class="meta">
@@ -94,7 +91,7 @@
   </header>
 
 
-  <div class="entry-content"><p><a href="https://www.startssl.com/">StartSSL</a> でサーバ証明書を発行して Web サーバに設定しました。確認のために Firefox でアクセスすると、</p>
+<div class="entry-content"><p><a href="https://www.startssl.com/">StartSSL</a> でサーバ証明書を発行して Web サーバに設定しました。確認のために Firefox でアクセスすると、</p>
 
 <p><img src="/images/startssl/ocsp_err1.png"></p>
 
@@ -274,107 +271,16 @@
 </span><span class='line'>  : (略)</span></code></pre></td></tr></table></div></figure>
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/03/19/startssl-problem/">StartSSLのクライアント証明書の認証がエラーになる</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">tenforward</span></span>
 
-<time datetime="2015-03-19T14:26:33+09:00" pubdate data-updated="true">Mar 19<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://www.startssl.com/">StartSSL</a>では、証明書の発行などの処理を行う場合はクライアント証明書による認証でログインして色々な処理を行いますが、<strong>有効な証明書をブラウザにインストールしているのに</strong>、なぜかエラーになっていたので少し調べてみました。</p>
-
-<ul>
-<li><a href="http://kijitora.sabatora.info/wordpress/archives/319">「StartComからクライアント証明書を調達する」</a> (SiTE Arinko)</li>
-</ul>
-
-
-<p>にあるのと同じエラーでした。</p>
-
-<p><img src="/images/startssl/startcom1.png"></p>
-
-<p>解決方法は実は以下に書いてあるので、それを見れば終わりです。</p>
-
-<ul>
-<li><a href="https://forum.startcom.org/viewtopic.php?f=15&amp;t=15794&amp;p=21375">HOWTO: Login issues</a> (Official StartCom Public User Forum)</li>
-</ul>
-
-
-<h2>Firefox の場合</h2>
-
-<p>一応、firefox の場合を書いておきます。</p>
-
-<ol>
-<li>まずは証明書マネージャを開きます。<br/><img src="/images/startssl/startcom4.png"></li>
-<li>認証局の証明書でStartComのモノのうち以下の画像のようなモノを探します。証明書のCNが&#8221;StartCom Certification Authority&#8221;で、発行者のCNが&#8221;StartCom Certification Authority G2&#8221;となっているものです。<br/><img src="/images/startssl/startcom2.png"></li>
-<li>これを消去します。</li>
-</ol>
-
-
-<p>終わりです。ただし、この認証局証明書がない場合もあるようです。新しくFirefoxのProfileを作ってみるとありませんでした。ずっとProfileを使い続けているとあるものなのかも知れません。以下のように前述の画像と比べるとStartComの証明書の数が全然違います。問題となる証明書がない場合は正常に認証されるのでしょう。</p>
-
-<p><img src="/images/startssl/startcom3.png"></p>
-
-<h2>Chrome (Linux) の場合</h2>
-
-<p>Linux 版 Chrome でも証明書マネージャから同じ証明書を探して消去すれば OK でした。</p>
-
-<p><img src="/images/startssl/startcom7.png"></p>
-
-<h2>Windows (IE/Chrome) の場合</h2>
-
-<p>Windows でも同じエラーになりました。</p>
-
-<p><img src="/images/startssl/startcom5.png"><br/>(IE)</p>
-
-<p><img src="/images/startssl/startcom6.png"><br/>(Chrome)</p>
-
-<p>Windows の証明書ストアを開いて見ましたが、先の HOWTO のように「中間証明機関」のところにも「信頼されたルート証明機関」のところにも目的の証明書を見つけられませんでした。</p>
-
-<p>見つかれば消去すれば良いようですが…</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/12/24/hostapd/">Raspberry Pi を無線 LAN アクセスポイントに</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -386,156 +292,38 @@
   
 
 
-<time datetime="2013-12-24T00:13:10+09:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
-        
-      </p>
+<time datetime="2015-03-20T15:36:35+09:00" pubdate data-updated="true">Mar 20<span>th</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/pki/'>PKI</a>, <a class='category' href='/blog/categories/ssl/'>SSL</a>, <a class='category' href='/blog/categories/tls/'>TLS</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>自宅には Buffalo の無線 LAN ルーターがあって，それをアクセスポイント (以降 AP) として使っているのですが，とある理由でもう 1 つ別の AP を置こうということになり，丁度余っていた Raspberry Pi を AP に仕立てる事にしました．</p>
-
-<p>同じ内容を扱うブログエントリは検索すると多数出てきますので，これは単なる個人用メモ代わりに近いです．検索で出てくる多くの内容は無線 LAN 側にアドレスを割り当てて iptables で NAT するパターンが多いですが，自宅だと既に NAT がかかっている事が多く，さらに NAT する意味がウチで使う限りはあまり感じられないので，単なるブリッジとして設定してみました．</p>
-
-<h3>USB 無線 LAN 子機</h3>
-
-<p>選択した無線 LAN 子機は Buffalo の <a href="http://www.amazon.co.jp/gp/product/B005DU4XPU/">WLI-UC-GNM2T</a> というものでした．これだと AP として使うソフトの hostapd が対応している模様なので (WLI-UC-GNM2 というパッケージだけ違うモデルもあります．WLI-UC-GNM は似てるけど使ってるチップが違う模様)</p>
-
-<h3>Raspberry Pi 側の準備</h3>
-
-<ol>
-<li>普通に Raspbian をインストールします</li>
-<li>追加でパッケージをインストールします <pre>$ sudo apt-get install bridge-utils hostapd</pre></li>
-<li>/etc/network/interfaces の設定 <pre>
-auto lo
-iface lo inet loopback<br/>
-iface eth0 inet manual<br/>
-allow-hotplug wlan0
-iface wlan0 inet manual<br/>
-auto br0
-iface br0 inet dhcp
-bridge_ports eth0</pre>
-
-<ul>
-<li>ブリッジ br0 を作成し，DHCP でアドレスを取得します．eth0, wlan0 を manual にして，eth0 を br0 にアタッチします．wlan0 は後ほど hostapd で br0 にアタッチする設定をします</li>
-</ul>
-</li>
-</ol>
-
-
-<h3>hostapd の設定</h3>
-
-<p>パッケージに含まれない設定ファイルを /etc/hostapd/hostapd.conf に作成します．あまり意味分かってません．サンプルファイルを元に設定しました．</p>
-
-<ul>
-<li><code>bridge=br0</code> で br0 にアタッチしています</li>
-<li><code>wmm_*</code> という設定は検索して出てくる設定例にはないことが多いですが，ないと問題が起きるという事が書いてある所もあったのでサンプルのものそのままで設定しました
-
-<ul>
-<li>WPA2 の所はこんな感じで良いのかなあと．</li>
-</ul>
-</li>
-</ul>
-
-
-<pre>
-# interface
-interface=wlan0
-bridge=br0
-
-# driver
-driver=nl80211
-
-# logger
-logger_syslog=-1
-logger_syslog_level=2
-logger_stdout=-1
-logger_stdout_level=2
-
-# files
-dump_file=/tmp/hostapd.dump
-ctrl_interface=/var/run/hostapd
-
-ctrl_interface_group=0
-
-
-##### IEEE 802.11 related configuration #######################################
-
-ssid=黄巾のLAN
-country_code=JP
-ieee80211d=1
-hw_mode=g
-channel=1
-beacon_int=100
-dtim_period=2
-max_num_sta=255
-rts_threshold=2347
-fragm_threshold=2346
-
-macaddr_acl=0
-#accept_mac_file=/etc/hostapd.accept
-#deny_mac_file=/etc/hostapd.deny
-
-auth_algs=3
-ignore_broadcast_ssid=0
-
-wmm_enabled=1
-# Low priority / AC_BK = background
-wmm_ac_bk_cwmin=4
-wmm_ac_bk_cwmax=10
-wmm_ac_bk_aifs=7
-wmm_ac_bk_txop_limit=0
-wmm_ac_bk_acm=0
-# Normal priority / AC_BE = best effort
-wmm_ac_be_aifs=3
-wmm_ac_be_cwmin=4
-wmm_ac_be_cwmax=10
-wmm_ac_be_txop_limit=0
-wmm_ac_be_acm=0
-# High priority / AC_VI = video
-wmm_ac_vi_aifs=2
-wmm_ac_vi_cwmin=3
-wmm_ac_vi_cwmax=4
-wmm_ac_vi_txop_limit=94
-wmm_ac_vi_acm=0
-# Highest priority / AC_VO = voice
-wmm_ac_vo_aifs=2
-wmm_ac_vo_cwmin=2
-wmm_ac_vo_cwmax=3
-wmm_ac_vo_txop_limit=47
-wmm_ac_vo_acm=0
-
-wpa=2
-wpa_passphrase=hogehoge
-wpa_key_mgmt=WPA-PSK
-wpa_pairwise=CCMP
-</pre>
-
-
-<p>サービスを起動させると</p>
-
-<pre>
-root@raspberrypi:/etc/cron.d# brctl show
-bridge name bridge id       STP enabled interfaces
-br0     8000.b0c74546d440   no      eth0
-                            wlan0
-</pre>
-
-
-<p>こんな感じで br0 にアタッチされてます．Android 4.1, iOS 7, Mac OS 10.9 で接続できました．</p>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tenforward.github.io/blog/2015/03/20/startssl-ocsp/" data-via="ten_forward" data-counturl="http://tenforward.github.io/blog/2015/03/20/startssl-ocsp/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/03/19/startssl-problem/" title="Previous Post: StartSSLのクライアント証明書の認証がエラーになる">&laquo; StartSSLのクライアント証明書の認証がエラーになる</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -566,6 +354,7 @@ br0     8000.b0c74546d440   no      eth0
 
   
 </aside>
+
 
     </div>
   </div>

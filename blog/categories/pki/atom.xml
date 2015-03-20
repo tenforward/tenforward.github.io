@@ -4,7 +4,7 @@
   <title><![CDATA[Category: PKI | TenForward]]></title>
   <link href="http://tenforward.github.io/blog/categories/pki/atom.xml" rel="self"/>
   <link href="http://tenforward.github.io/"/>
-  <updated>2015-03-19T15:15:43+09:00</updated>
+  <updated>2015-03-20T16:48:39+09:00</updated>
   <id>http://tenforward.github.io/</id>
   <author>
     <name><![CDATA[tenforward]]></name>
@@ -12,6 +12,157 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[StartSSLの発行直後の証明書とOCSP]]></title>
+    <link href="http://tenforward.github.io/blog/2015/03/20/startssl-ocsp/"/>
+    <updated>2015-03-20T15:36:35+09:00</updated>
+    <id>http://tenforward.github.io/blog/2015/03/20/startssl-ocsp</id>
+    <content type="html"><![CDATA[<p><a href="https://www.startssl.com/">StartSSL</a> でサーバ証明書を発行して Web サーバに設定しました。確認のために Firefox でアクセスすると、</p>
+
+<p><img src="/images/startssl/ocsp_err1.png"></p>
+
+<p>&ldquo;sec_error_ocsp_unknown_cert&rdquo; というエラーです。</p>
+
+<p>Firefox はデフォルトでは OCSP レスポンダに問い合わせて証明書の有効性を確認するようです。</p>
+
+<p><img src="/images/startssl/firefox_ocsp.png"></p>
+
+<p>ぐぐってみると似たような話題があります。</p>
+
+<ul>
+<li><a href="https://forum.startcom.org/viewtopic.php?f=15&amp;t=2654">Certificate OCSP Validation Failiure in Firefox</a> (Official StartCom Public User Forum)</li>
+</ul>
+
+
+<p>StartSSL の OCSP レスポンダに新たに発行した証明書の情報が反映されるのに時間がかかるということでしょうかね。試してみました。フォーラムでは 6 時間くらいしたら反映された、という話もあるのでしばらくかかるのかも。</p>
+
+<h2>準備</h2>
+
+<p>StartSSL は中間証明書を使いますのでその準備を。StartSSL の CA 証明書と中間証明書を取得し、openssl の c_hash ユーティリティを使ってハッシュ値のリンクを作っておきます。</p>
+
+<p><code>
+$ ls -l start.com/
+合計 8,192
+lrwxrwxrwx 1 karma users    24  3月 19日  17:35 38d751eb.0 -&gt; sub.class1.server.ca.pem
+lrwxrwxrwx 1 karma users     6  3月 19日  17:35 ae8153b9.0 -&gt; ca.pem
+-rw-r--r-- 1 karma users 2,760  5月  7日 2008年 ca.pem
+-rw-r--r-- 1 karma users 2,090  2月  5日  06:10 sub.class1.server.ca.pem
+</code></p>
+
+<h2>正常な場合</h2>
+
+<p>まずは StartSSL で発行した証明書で Firefox からもアクセスできている場合を試してみましょう。</p>
+
+<p>```
+$ openssl ocsp \</p>
+
+<blockquote><p>-issuer start.com/sub.class1.server.ca.pem \
+-cert guinan.ten-forward.ws.crt \
+-url <a href="http://ocsp.startssl.com/sub/class1/server/ca">http://ocsp.startssl.com/sub/class1/server/ca</a> \
+-header Host ocsp.startssl.com \
+-CApath start.com/
+WARNING: no nonce in response
+Response verify OK
+guinan.ten-forward.ws.crt: good</p>
+
+<pre><code>This Update: Mar 19 06:01:44 2015 GMT
+Next Update: Mar 21 06:01:44 2015 GMT
+</code></pre>
+
+<p>```</p></blockquote>
+
+<ul>
+<li>issuer: Issuerの証明書</li>
+<li>cert: チェック対象の証明書</li>
+<li>url: OCSP レスポンダの URL</li>
+<li>header: OCSP レスポンダがバーチャルホストの場合に Host ヘッダを送る必要があるのでそれを記述</li>
+<li>CApath: 事前に準備したディレクトリ</li>
+</ul>
+
+
+<p><strong>&ldquo;good&rdquo; と出ていますね</strong>。</p>
+
+<h2>発行直後のもの</h2>
+
+<p>上記と同様にやってみます。</p>
+
+<p>```
+$ openssl ocsp \</p>
+
+<blockquote><p>-issuer start.com/sub.class1.server.ca.pem \
+-cert kilkenny.harp.gr.jp.crt \
+-url <a href="http://ocsp.startssl.com/sub/class1/server/ca">http://ocsp.startssl.com/sub/class1/server/ca</a> \
+-header Host ocsp.startssl.com \
+-CApath start.com/
+WARNING: no nonce in response
+Response verify OK
+kilkenny.harp.gr.jp.crt: unknown</p>
+
+<pre><code>This Update: Mar 19 07:31:50 2015 GMT
+Next Update: Mar 21 07:31:50 2015 GMT
+</code></pre>
+
+<p>```</p></blockquote>
+
+<p>確かに &ldquo;unknown&rdquo; と返ってきています。これで"sec_error_ocsp_unknown_cert"となるのもわかります。</p>
+
+<h2>少し時間が経った後</h2>
+
+<p>上記と同じようにやってみると、</p>
+
+<p>```
+$ openssl ocsp \</p>
+
+<blockquote><p>-issuer start.com/sub.class1.server.ca.pem \
+-cert kilkenny.harp.gr.jp.crt \
+-url <a href="http://ocsp.startssl.com/sub/class1/server/ca">http://ocsp.startssl.com/sub/class1/server/ca</a> \
+-header Host ocsp.startssl.com \
+-CApath start.com/
+WARNING: no nonce in response
+Response verify OK
+kilkenny.harp.gr.jp.crt: good</p>
+
+<pre><code>This Update: Mar 20 06:37:15 2015 GMT
+Next Update: Mar 22 06:37:15 2015 GMT
+</code></pre>
+
+<p>```</p></blockquote>
+
+<p><strong>無事 good になりました</strong>。</p>
+
+<h2>まとめ</h2>
+
+<p>StartSSL でサーバ証明書を発行する場合は少し余裕を持って、発行されてから少し経った後に証明書のインストール・入れ替えをすると良いと思います。</p>
+
+<h2>おまけ</h2>
+
+<p>上記のコマンドで <code>-resp_text</code> とオプションを付けると、レスポンスの出力ができます。</p>
+
+<p>```
+$ openssl ocsp (..略..) -resp_text
+OCSP Response Data:</p>
+
+<pre><code>OCSP Response Status: successful (0x0)
+Response Type: Basic OCSP Response
+Version: 1 (0x0)
+Responder Id: C = IL, O = StartCom Ltd. (Start Commercial Limited), CN = StartCom Class 1 Server OCSP Signer
+Produced At: Mar 20 06:37:15 2015 GMT
+Responses:
+Certificate ID:
+  Hash Algorithm: sha1
+  Issuer Name Hash: 6568874F40750F016A3475625E1F5C93E5A26D58
+  Issuer Key Hash: EB4234D098B0AB9FF41B6B08F7CC642EEF0E2C45
+  Serial Number: 0564461CA61DBC
+Cert Status: good
+This Update: Mar 20 06:37:15 2015 GMT
+Next Update: Mar 22 06:37:15 2015 GMT
+</code></pre>
+
+<p>  : (略)
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[StartSSLのクライアント証明書の認証がエラーになる]]></title>
