@@ -4,7 +4,7 @@
   <title><![CDATA[TenForward]]></title>
   <link href="http://tenforward.github.io/atom.xml" rel="self"/>
   <link href="http://tenforward.github.io/"/>
-  <updated>2015-03-20T16:53:11+09:00</updated>
+  <updated>2015-03-26T15:31:48+09:00</updated>
   <id>http://tenforward.github.io/</id>
   <author>
     <name><![CDATA[tenforward]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Firefox と Fcitx の組み合わせで Facebook にコメントできない]]></title>
+    <link href="http://tenforward.github.io/blog/2015/03/26/firefox-fcitx/"/>
+    <updated>2015-03-26T15:21:16+09:00</updated>
+    <id>http://tenforward.github.io/blog/2015/03/26/firefox-fcitx</id>
+    <content type="html"><![CDATA[<p>Plamo Linux ではブラウザは Firefox で、日本語入力には fcitx + mozc を使っている (fcitx, mozc は Plamo パッケージでなく自前ビルドのパッケージ)。</p>
+
+<p>いつの頃からか (firefox 35 辺り?) Facebook のコメント (普通のポストは可能) ができなくなっている (ibus も。uim は行けた気がする)。</p>
+
+<p>調べてみると、</p>
+
+<ul>
+<li>Facebook のコメント</li>
+<li>Google Docs</li>
+</ul>
+
+
+<p>辺りで起こっている模様。</p>
+
+<ul>
+<li><a href="https://bbs.archlinux.org/viewtopic.php?id=194083">[Solved] Firefox Facebook cannot comment with fcitx</a> (archlinux bbs)</li>
+<li><a href="https://lists.ubuntu.com/archives/ubuntu-jp/2015-January/005090.html">[ubuntu-jp:5901] facebookで他人のコメントに日本語で打ち込むとき最初の数回入力が反映されないubuntu 14.04 fcitx mozc firefox</a> (ubuntu-jp ML)</li>
+</ul>
+
+
+<p>fcitx の preedit モードをオフにすれば良いようだがなんだかみっともない ^^;</p>
+
+<ul>
+<li><a href="https://fcitx-im.org/wiki/FAQ#Problem_in_Firefox_and_Google_Docs">Problem in Firefox and Google Docs</a> (FAQ &ndash; Fcitx)</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[StartSSLの発行直後の証明書とOCSP]]></title>

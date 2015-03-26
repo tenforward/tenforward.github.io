@@ -9,7 +9,7 @@
   <meta name="author" content="tenforward">
 
   
-  <meta name="description" content="StartSSL でサーバ証明書を発行して Web サーバに設定しました。確認のために Firefox でアクセスすると、 &ldquo;sec_error_ocsp_unknown_cert&rdquo; というエラーです。 Firefox はデフォルトでは OCSP &hellip;">
+  <meta name="description" content="Plamo Linux ではブラウザは Firefox で、日本語入力には fcitx + mozc を使っている (fcitx, mozc は Plamo パッケージでなく自前ビルドのパッケージ)。 いつの頃からか (firefox 35 辺り?) Facebook のコメント ( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,67 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/03/26/firefox-fcitx/">Firefox と Fcitx の組み合わせで Facebook にコメントできない</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-26T15:21:16+09:00" pubdate data-updated="true">Mar 26<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Plamo Linux ではブラウザは Firefox で、日本語入力には fcitx + mozc を使っている (fcitx, mozc は Plamo パッケージでなく自前ビルドのパッケージ)。</p>
+
+<p>いつの頃からか (firefox 35 辺り?) Facebook のコメント (普通のポストは可能) ができなくなっている (ibus も。uim は行けた気がする)。</p>
+
+<p>調べてみると、</p>
+
+<ul>
+<li>Facebook のコメント</li>
+<li>Google Docs</li>
+</ul>
+
+
+<p>辺りで起こっている模様。</p>
+
+<ul>
+<li><a href="https://bbs.archlinux.org/viewtopic.php?id=194083">[Solved] Firefox Facebook cannot comment with fcitx</a> (archlinux bbs)</li>
+<li><a href="https://lists.ubuntu.com/archives/ubuntu-jp/2015-January/005090.html">[ubuntu-jp:5901] facebookで他人のコメントに日本語で打ち込むとき最初の数回入力が反映されないubuntu 14.04 fcitx mozc firefox</a> (ubuntu-jp ML)</li>
+</ul>
+
+
+<p>fcitx の preedit モードをオフにすれば良いようだがなんだかみっともない ^^;</p>
+
+<ul>
+<li><a href="https://fcitx-im.org/wiki/FAQ#Problem_in_Firefox_and_Google_Docs">Problem in Firefox and Google Docs</a> (FAQ &ndash; Fcitx)</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -540,11 +601,15 @@ br0     8000.b0c74546d440   no      eth0
   
     <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/pki/'>PKI (2)</a></li><li><a href='/blog/categories/raspberrypi/'>RaspberryPi (1)</a></li><li><a href='/blog/categories/ssl/'>SSL (2)</a></li><li><a href='/blog/categories/tls/'>TLS (2)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/fcitx/'>fcitx (1)</a></li><li><a href='/blog/categories/firefox/'>firefox (1)</a></li><li><a href='/blog/categories/linux/'>linux (1)</a></li><li><a href='/blog/categories/pki/'>PKI (2)</a></li><li><a href='/blog/categories/raspberrypi/'>RaspberryPi (1)</a></li><li><a href='/blog/categories/ssl/'>SSL (2)</a></li><li><a href='/blog/categories/tls/'>TLS (2)</a></li></ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/03/26/firefox-fcitx/">Firefox と Fcitx の組み合わせで Facebook にコメントできない</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/03/20/startssl-ocsp/">StartSSLの発行直後の証明書とOCSP</a>
