@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TLS | TenForward]]></title>
   <link href="http://tenforward.github.io/blog/categories/tls/atom.xml" rel="self"/>
   <link href="http://tenforward.github.io/"/>
-  <updated>2015-03-26T15:31:48+09:00</updated>
+  <updated>2015-04-13T16:55:19+09:00</updated>
   <id>http://tenforward.github.io/</id>
   <author>
     <name><![CDATA[tenforward]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Firefoxでssl_error_bad_mac_alert]]></title>
+    <link href="http://tenforward.github.io/blog/2015/04/13/ssl-error-bad-mac-alert/"/>
+    <updated>2015-04-13T16:32:59+09:00</updated>
+    <id>http://tenforward.github.io/blog/2015/04/13/ssl-error-bad-mac-alert</id>
+    <content type="html"><![CDATA[<p>とあるサイトに firefox 37.0.1 (Linux版, Mac版で確認) で https アクセスすると</p>
+
+<p><img src="/images/ssl_error_bad_mac_alert/ssl_error_bad_mac_alert_1.png"></p>
+
+<p>というエラーが出ます。</p>
+
+<p><img src="/images/ssl_error_bad_mac_alert/ssl_error_bad_mac_alert_2.png">
+<img src="/images/ssl_error_bad_mac_alert/ssl_error_bad_mac_alert_3.png"></p>
+
+<p>これだけだと中間証明書がサーバ側に置かれてないのでツリーをたどれないのかな？と思いますが、ここでこのエラーを無視してそのままアクセスすると</p>
+
+<p><img src="/images/ssl_error_bad_mac_alert/ssl_error_bad_mac_alert_4.png"></p>
+
+<p>こんなエラーに。これは初めて見るなあ。MAC のエラー&hellip;</p>
+
+<p>とりあえずサイトに報告しておきます。以下のブラウザでは <strong>問題ありません</strong> 。</p>
+
+<ul>
+<li>Windows 版 IE 11, Chrome 41.0.2272.118</li>
+<li>Mac 版 Chrome 41.0.2272.118, Safari 8.0.4</li>
+<li>Linux 版 Chrome 41.0.2272.76</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[StartSSLの発行直後の証明書とOCSP]]></title>
