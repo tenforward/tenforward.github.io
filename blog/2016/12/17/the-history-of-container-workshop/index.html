@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>TenForward</title>
+  <title>コンテナ型仮想化の情報交換会について - TenForward</title>
   <meta name="author" content="tenforward">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tenforward.github.io">
+  <link rel="canonical" href="http://tenforward.github.io/blog/2016/12/17/the-history-of-container-workshop">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="TenForward" type="application/atom+xml">
@@ -63,15 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2016/12/17/the-history-of-container-workshop/">コンテナ型仮想化の情報交換会について</a></h1>
+      <h1 class="entry-title">コンテナ型仮想化の情報交換会について</h1>
     
     
       <p class="meta">
@@ -94,7 +91,7 @@
   </header>
 
 
-  <div class="entry-content"><p>この記事は<a href="http://www.adventar.org/calendars/1803">IT勉強会/コミュニティ運営 Advent Calendar 2016</a> (@ADVENTAR) 17 日目のエントリです。</p>
+<div class="entry-content"><p>この記事は<a href="http://www.adventar.org/calendars/1803">IT勉強会/コミュニティ運営 Advent Calendar 2016</a> (@ADVENTAR) 17 日目のエントリです。</p>
 
 <p><strong>「勉強会/コミュニティ運営」</strong>!!</p>
 
@@ -284,80 +281,16 @@
 
 <p>大阪、東京メインで開催していますが、それ以外でも会場を提供いただける場所と、お話いただける方がいらっしゃれば、私のいつもの持ちネタ「Linuxコンテナ入門」と共にお伺いできます、というかぜひやりたいです!! お声がけお待ちしております。北海道とか沖縄でも行きますよ！（行きたいだけ）</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/04/13/ssl-error-bad-mac-alert/">Firefoxでssl_error_bad_mac_alert</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">tenforward</span></span>
 
-<time datetime="2015-04-13T16:32:59+09:00" pubdate data-updated="true">Apr 13<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>とあるサイトに firefox 37.0.1 (Linux版, Mac版で確認) で https アクセスすると</p>
-
-<p><img src="/images/ssl_error_bad_mac_alert/ssl_error_bad_mac_alert_1.png"></p>
-
-<p>というエラーが出ます。</p>
-
-<p><img src="/images/ssl_error_bad_mac_alert/ssl_error_bad_mac_alert_2.png">
-<img src="/images/ssl_error_bad_mac_alert/ssl_error_bad_mac_alert_3.png"></p>
-
-<p>これだけだと中間証明書がサーバ側に置かれてないのでツリーをたどれないのかな？と思いますが、ここでこのエラーを無視してそのままアクセスすると</p>
-
-<p><img src="/images/ssl_error_bad_mac_alert/ssl_error_bad_mac_alert_4.png"></p>
-
-<p>こんなエラーに。これは初めて見るなあ。MAC のエラー&hellip;</p>
-
-<p>とりあえずサイトに報告しておきます。以下のブラウザでは <strong>問題ありません</strong> 。</p>
-
-<ul>
-<li>Windows 版 IE 11, Chrome 41.0.2272.118</li>
-<li>Mac 版 Chrome 41.0.2272.118, Safari 8.0.4</li>
-<li>Linux 版 Chrome 41.0.2272.76</li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/03/26/firefox-fcitx/">Firefox と Fcitx の組み合わせで Facebook にコメントできない</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -369,516 +302,38 @@
   
 
 
-<time datetime="2015-03-26T15:21:16+09:00" pubdate data-updated="true">Mar 26<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Plamo Linux ではブラウザは Firefox で、日本語入力には fcitx + mozc を使っている (fcitx, mozc は Plamo パッケージでなく自前ビルドのパッケージ)。</p>
-
-<p>いつの頃からか (firefox 35 辺り?) Facebook のコメント (普通のポストは可能) ができなくなっている (ibus も。uim は行けた気がする)。</p>
-
-<p>調べてみると、</p>
-
-<ul>
-<li>Facebook のコメント</li>
-<li>Google Docs</li>
-</ul>
-
-
-<p>辺りで起こっている模様。</p>
-
-<ul>
-<li><a href="https://bbs.archlinux.org/viewtopic.php?id=194083">[Solved] Firefox Facebook cannot comment with fcitx</a> (archlinux bbs)</li>
-<li><a href="https://lists.ubuntu.com/archives/ubuntu-jp/2015-January/005090.html">[ubuntu-jp:5901] facebookで他人のコメントに日本語で打ち込むとき最初の数回入力が反映されないubuntu 14.04 fcitx mozc firefox</a> (ubuntu-jp ML)</li>
-</ul>
-
-
-<p>fcitx の preedit モードをオフにすれば良いようだがなんだかみっともない ^^;</p>
-
-<ul>
-<li><a href="https://fcitx-im.org/wiki/FAQ#Problem_in_Firefox_and_Google_Docs">Problem in Firefox and Google Docs</a> (FAQ &ndash; Fcitx)</li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+<time datetime="2016-12-17T15:22:17+09:00" pubdate data-updated="true">Dec 17<span>th</span>, 2016</time>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/03/20/startssl-ocsp/">StartSSLの発行直後の証明書とOCSP</a></h1>
-    
-    
-      <p class="meta">
-        
 
-
-
-
-
-
-
-
+<span class="categories">
   
+    <a class='category' href='/blog/categories/poem/'>poem</a>
+  
+</span>
 
 
-<time datetime="2015-03-20T15:36:35+09:00" pubdate data-updated="true">Mar 20<span>th</span>, 2015</time>
-        
-      </p>
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://www.startssl.com/">StartSSL</a> でサーバ証明書を発行して Web サーバに設定しました。確認のために Firefox でアクセスすると、</p>
-
-<p><img src="/images/startssl/ocsp_err1.png"></p>
-
-<p>&ldquo;sec_error_ocsp_unknown_cert&rdquo; というエラーです。</p>
-
-<p>Firefox はデフォルトでは OCSP レスポンダに問い合わせて証明書の有効性を確認するようです。</p>
-
-<p><img src="/images/startssl/firefox_ocsp.png"></p>
-
-<p>ぐぐってみると似たような話題があります。</p>
-
-<ul>
-<li><a href="https://forum.startcom.org/viewtopic.php?f=15&amp;t=2654">Certificate OCSP Validation Failiure in Firefox</a> (Official StartCom Public User Forum)</li>
-</ul>
-
-
-<p>StartSSL の OCSP レスポンダに新たに発行した証明書の情報が反映されるのに時間がかかるということでしょうかね。試してみました。フォーラムでは 6 時間くらいしたら反映された、という話もあるのでしばらくかかるのかも。</p>
-
-<h2>準備</h2>
-
-<p>StartSSL は中間証明書を使いますのでその準備を。StartSSL の CA 証明書と中間証明書を取得し、openssl の c_hash ユーティリティを使ってハッシュ値のリンクを作っておきます。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ ls -l start.com/
-</span><span class='line'>合計 8,192
-</span><span class='line'>lrwxrwxrwx 1 karma users    24  3月 19日  17:35 38d751eb.0 -&gt; sub.class1.server.ca.pem
-</span><span class='line'>lrwxrwxrwx 1 karma users     6  3月 19日  17:35 ae8153b9.0 -&gt; ca.pem
-</span><span class='line'>-rw-r--r-- 1 karma users 2,760  5月  7日 2008年 ca.pem
-</span><span class='line'>-rw-r--r-- 1 karma users 2,090  2月  5日  06:10 sub.class1.server.ca.pem</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>正常な場合</h2>
-
-<p>まずは StartSSL で発行した証明書で Firefox からもアクセスできている証明書で試してみましょう。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ openssl ocsp \
-</span><span class='line'>&gt; -issuer start.com/sub.class1.server.ca.pem \
-</span><span class='line'>&gt; -cert guinan.ten-forward.ws.crt \
-</span><span class='line'>&gt; -url http://ocsp.startssl.com/sub/class1/server/ca \
-</span><span class='line'>&gt; -header Host ocsp.startssl.com \
-</span><span class='line'>&gt; -CApath start.com/ 
-</span><span class='line'>WARNING: no nonce in response
-</span><span class='line'>Response verify OK
-</span><span class='line'>guinan.ten-forward.ws.crt: good
-</span><span class='line'>  This Update: Mar 19 06:01:44 2015 GMT
-</span><span class='line'>  Next Update: Mar 21 06:01:44 2015 GMT</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>issuer: Issuerの証明書</li>
-<li>cert: チェック対象の証明書</li>
-<li>url: OCSP レスポンダの URL</li>
-<li>header: OCSP レスポンダがバーチャルホストの場合に Host ヘッダを送る必要があるのでそれを記述</li>
-<li>CApath: 事前に準備したディレクトリ</li>
-</ul>
-
-
-<p><strong>&ldquo;good&rdquo; と出ていますね</strong>。</p>
-
-<h2>発行直後のもの</h2>
-
-<p>発行直後で Firefox でアクセスするとエラーになる証明書で上記と同様にやってみます。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ openssl ocsp \
-</span><span class='line'>&gt; -issuer start.com/sub.class1.server.ca.pem \
-</span><span class='line'>&gt; -cert kilkenny.harp.gr.jp.crt \
-</span><span class='line'>&gt; -url http://ocsp.startssl.com/sub/class1/server/ca \
-</span><span class='line'>&gt; -header Host ocsp.startssl.com \
-</span><span class='line'>&gt; -CApath start.com/ 
-</span><span class='line'>WARNING: no nonce in response
-</span><span class='line'>Response verify OK
-</span><span class='line'>kilkenny.harp.gr.jp.crt: unknown
-</span><span class='line'>  This Update: Mar 19 07:31:50 2015 GMT
-</span><span class='line'>  Next Update: Mar 21 07:31:50 2015 GMT</span></code></pre></td></tr></table></div></figure>
-
-
-<p>確かに &ldquo;unknown&rdquo; と返ってきています。これで&#8221;sec_error_ocsp_unknown_cert&#8221;となるのもわかります。</p>
-
-<h2>少し時間が経った後</h2>
-
-<p>上記と同じようにやってみると、</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ openssl ocsp \
-</span><span class='line'>&gt; -issuer start.com/sub.class1.server.ca.pem \
-</span><span class='line'>&gt; -cert kilkenny.harp.gr.jp.crt \
-</span><span class='line'>&gt; -url http://ocsp.startssl.com/sub/class1/server/ca \
-</span><span class='line'>&gt; -header Host ocsp.startssl.com \
-</span><span class='line'>&gt; -CApath start.com/
-</span><span class='line'>WARNING: no nonce in response
-</span><span class='line'>Response verify OK
-</span><span class='line'>kilkenny.harp.gr.jp.crt: good
-</span><span class='line'>  This Update: Mar 20 06:37:15 2015 GMT
-</span><span class='line'>  Next Update: Mar 22 06:37:15 2015 GMT</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>無事 good になりました</strong>。</p>
-
-<h2>まとめ</h2>
-
-<p>StartSSL でサーバ証明書を発行する場合は少し余裕を持って、発行されてから少し経った後に証明書のインストール・入れ替えをすると良いと思います。</p>
-
-<h2>おまけ</h2>
-
-<p>上記のコマンドで <code>-resp_text</code> とオプションを付けると、レスポンスの出力ができます。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ openssl ocsp (..略..) -resp_text
-</span><span class='line'>OCSP Response Data:
-</span><span class='line'>    OCSP Response Status: successful (0x0)
-</span><span class='line'>    Response Type: Basic OCSP Response
-</span><span class='line'>    Version: 1 (0x0)
-</span><span class='line'>    Responder Id: C = IL, O = StartCom Ltd. (Start Commercial Limited), CN = StartCom Class 1 Server OCSP Signer
-</span><span class='line'>    Produced At: Mar 20 06:37:15 2015 GMT
-</span><span class='line'>    Responses:
-</span><span class='line'>    Certificate ID:
-</span><span class='line'>      Hash Algorithm: sha1
-</span><span class='line'>      Issuer Name Hash: 6568874F40750F016A3475625E1F5C93E5A26D58
-</span><span class='line'>      Issuer Key Hash: EB4234D098B0AB9FF41B6B08F7CC642EEF0E2C45
-</span><span class='line'>      Serial Number: 0564461CA61DBC
-</span><span class='line'>    Cert Status: good
-</span><span class='line'>    This Update: Mar 20 06:37:15 2015 GMT
-</span><span class='line'>    Next Update: Mar 22 06:37:15 2015 GMT
-</span><span class='line'>  : (略)</span></code></pre></td></tr></table></div></figure>
-
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tenforward.github.io/blog/2016/12/17/the-history-of-container-workshop/" data-via="ten_forward" data-counturl="http://tenforward.github.io/blog/2016/12/17/the-history-of-container-workshop/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
-
-    </article>
-  
-  
-    <article>
+    
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/03/19/startssl-problem/">StartSSLのクライアント証明書の認証がエラーになる</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-03-19T14:26:33+09:00" pubdate data-updated="true">Mar 19<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://www.startssl.com/">StartSSL</a>では、証明書の発行などの処理を行う場合はクライアント証明書による認証でログインして色々な処理を行いますが、<strong>有効な証明書をブラウザにインストールしているのに</strong>、なぜかエラーになっていたので少し調べてみました。</p>
-
-<ul>
-<li><a href="http://kijitora.sabatora.info/wordpress/archives/319">「StartComからクライアント証明書を調達する」</a> (SiTE Arinko)</li>
-</ul>
-
-
-<p>にあるのと同じエラーでした。</p>
-
-<p><img src="/images/startssl/startcom1.png"></p>
-
-<p>解決方法は実は以下に書いてあるので、それを見れば終わりです。</p>
-
-<ul>
-<li><a href="https://forum.startcom.org/viewtopic.php?f=15&amp;t=15794&amp;p=21375">HOWTO: Login issues</a> (Official StartCom Public User Forum)</li>
-</ul>
-
-
-<h2>Firefox の場合</h2>
-
-<p>一応、firefox の場合を書いておきます。</p>
-
-<ol>
-<li>まずは証明書マネージャを開きます。<br/><img src="/images/startssl/startcom4.png"></li>
-<li>認証局の証明書でStartComのモノのうち以下の画像のようなモノを探します。証明書のCNが&#8221;StartCom Certification Authority&#8221;で、発行者のCNが&#8221;StartCom Certification Authority G2&#8221;となっているものです。<br/><img src="/images/startssl/startcom2.png"></li>
-<li>これを消去します。</li>
-</ol>
-
-
-<p>終わりです。ただし、この認証局証明書がない場合もあるようです。新しくFirefoxのProfileを作ってみるとありませんでした。ずっとProfileを使い続けているとあるものなのかも知れません。以下のように前述の画像と比べるとStartComの証明書の数が全然違います。問題となる証明書がない場合は正常に認証されるのでしょう。</p>
-
-<p><img src="/images/startssl/startcom3.png"></p>
-
-<h2>Chrome (Linux) の場合</h2>
-
-<p>Linux 版 Chrome でも証明書マネージャから同じ証明書を探して消去すれば OK でした。</p>
-
-<p><img src="/images/startssl/startcom7.png"></p>
-
-<h2>Windows (IE/Chrome) の場合</h2>
-
-<p>Windows でも同じエラーになりました。</p>
-
-<p><img src="/images/startssl/startcom5.png"><br/>(IE)</p>
-
-<p><img src="/images/startssl/startcom6.png"><br/>(Chrome)</p>
-
-<p>Windows の証明書ストアを開いて見ましたが、先の HOWTO のように「中間証明機関」のところにも「信頼されたルート証明機関」のところにも目的の証明書を見つけられませんでした。</p>
-
-<p>見つかれば消去すれば良いようですが…</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+        <a class="basic-alignment left" href="/blog/2015/04/13/ssl-error-bad-mac-alert/" title="Previous Post: firefoxでssl_error_bad_mac_alert">&laquo; firefoxでssl_error_bad_mac_alert</a>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/12/24/hostapd/">Raspberry Pi を無線 LAN アクセスポイントに</a></h1>
-    
-    
-      <p class="meta">
-        
+      
+    </p>
+  </footer>
+</article>
 
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-24T00:13:10+09:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>自宅には Buffalo の無線 LAN ルーターがあって，それをアクセスポイント (以降 AP) として使っているのですが，とある理由でもう 1 つ別の AP を置こうということになり，丁度余っていた Raspberry Pi を AP に仕立てる事にしました．</p>
-
-<p>同じ内容を扱うブログエントリは検索すると多数出てきますので，これは単なる個人用メモ代わりに近いです．検索で出てくる多くの内容は無線 LAN 側にアドレスを割り当てて iptables で NAT するパターンが多いですが，自宅だと既に NAT がかかっている事が多く，さらに NAT する意味がウチで使う限りはあまり感じられないので，単なるブリッジとして設定してみました．</p>
-
-<h3>USB 無線 LAN 子機</h3>
-
-<p>選択した無線 LAN 子機は Buffalo の <a href="http://www.amazon.co.jp/gp/product/B005DU4XPU/">WLI-UC-GNM2T</a> というものでした．これだと AP として使うソフトの hostapd が対応している模様なので (WLI-UC-GNM2 というパッケージだけ違うモデルもあります．WLI-UC-GNM は似てるけど使ってるチップが違う模様)</p>
-
-<h3>Raspberry Pi 側の準備</h3>
-
-<ol>
-<li>普通に Raspbian をインストールします</li>
-<li>追加でパッケージをインストールします <pre>$ sudo apt-get install bridge-utils hostapd</pre></li>
-<li>/etc/network/interfaces の設定 <pre>
-auto lo
-iface lo inet loopback<br/>
-iface eth0 inet manual<br/>
-allow-hotplug wlan0
-iface wlan0 inet manual<br/>
-auto br0
-iface br0 inet dhcp
-bridge_ports eth0</pre>
-
-<ul>
-<li>ブリッジ br0 を作成し，DHCP でアドレスを取得します．eth0, wlan0 を manual にして，eth0 を br0 にアタッチします．wlan0 は後ほど hostapd で br0 にアタッチする設定をします</li>
-</ul>
-</li>
-</ol>
-
-
-<h3>hostapd の設定</h3>
-
-<p>パッケージに含まれない設定ファイルを /etc/hostapd/hostapd.conf に作成します．あまり意味分かってません．サンプルファイルを元に設定しました．</p>
-
-<ul>
-<li><code>bridge=br0</code> で br0 にアタッチしています</li>
-<li><code>wmm_*</code> という設定は検索して出てくる設定例にはないことが多いですが，ないと問題が起きるという事が書いてある所もあったのでサンプルのものそのままで設定しました
-
-<ul>
-<li>WPA2 の所はこんな感じで良いのかなあと．</li>
-</ul>
-</li>
-</ul>
-
-
-<pre>
-# interface
-interface=wlan0
-bridge=br0
-
-# driver
-driver=nl80211
-
-# logger
-logger_syslog=-1
-logger_syslog_level=2
-logger_stdout=-1
-logger_stdout_level=2
-
-# files
-dump_file=/tmp/hostapd.dump
-ctrl_interface=/var/run/hostapd
-
-ctrl_interface_group=0
-
-
-##### IEEE 802.11 related configuration #######################################
-
-ssid=黄巾のLAN
-country_code=JP
-ieee80211d=1
-hw_mode=g
-channel=1
-beacon_int=100
-dtim_period=2
-max_num_sta=255
-rts_threshold=2347
-fragm_threshold=2346
-
-macaddr_acl=0
-#accept_mac_file=/etc/hostapd.accept
-#deny_mac_file=/etc/hostapd.deny
-
-auth_algs=3
-ignore_broadcast_ssid=0
-
-wmm_enabled=1
-# Low priority / AC_BK = background
-wmm_ac_bk_cwmin=4
-wmm_ac_bk_cwmax=10
-wmm_ac_bk_aifs=7
-wmm_ac_bk_txop_limit=0
-wmm_ac_bk_acm=0
-# Normal priority / AC_BE = best effort
-wmm_ac_be_aifs=3
-wmm_ac_be_cwmin=4
-wmm_ac_be_cwmax=10
-wmm_ac_be_txop_limit=0
-wmm_ac_be_acm=0
-# High priority / AC_VI = video
-wmm_ac_vi_aifs=2
-wmm_ac_vi_cwmin=3
-wmm_ac_vi_cwmax=4
-wmm_ac_vi_txop_limit=94
-wmm_ac_vi_acm=0
-# Highest priority / AC_VO = voice
-wmm_ac_vo_aifs=2
-wmm_ac_vo_cwmin=2
-wmm_ac_vo_cwmax=3
-wmm_ac_vo_txop_limit=47
-wmm_ac_vo_acm=0
-
-wpa=2
-wpa_passphrase=hogehoge
-wpa_key_mgmt=WPA-PSK
-wpa_pairwise=CCMP
-</pre>
-
-
-<p>サービスを起動させると</p>
-
-<pre>
-root@raspberrypi:/etc/cron.d# brctl show
-bridge name bridge id       STP enabled interfaces
-br0     8000.b0c74546d440   no      eth0
-                            wlan0
-</pre>
-
-
-<p>こんな感じで br0 にアタッチされてます．Android 4.1, iOS 7, Mac OS 10.9 で接続できました．</p>
 </div>
-  
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section>
@@ -917,6 +372,7 @@ br0     8000.b0c74546d440   no      eth0
 
   
 </aside>
+
 
     </div>
   </div>
