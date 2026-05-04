@@ -1,3 +1,47 @@
 baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+title = 'TenForward'
+theme = "hugo-coder"
+languagecode = "ja"
+defaultcontentlanguage = "ja"
+locale = "ja_JP"
+
+[pagination]
+pagerSize = 10
+
+[params]
+  author = "TenForward"
+  info = ""
+  description = "TenForward's profile, activities, and output."
+  keywords = "container,cyber security,K-POP,Progressive Rock,Progressive Metal,Jazz,WRC,K-Drama"
+  avatarurl = "images/megane_blue.png"
+
+  colorScheme = "auto"
+  hideColorSchemeToggle = "false"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/tenforward/"
+[[params.social]]
+  name = "X"
+  icon = "fa-brands fa-x-twitter fa-2x"
+  weight = 3
+  url = "https://x.com/ten_forward/"
+[[params.social]]
+  name = "Bluesky"
+  icon = "fa-brands fa-bluesky fa-2x"
+  url = "https://bsky.app/profile/tenforward.bsky.social"
+[[params.social]]
+  name = "Instagram"
+  icon = "fa-brands fa-instagram fa-2x"
+  url = "https://www.instagram.com/tenforward/"
+[[params.social]]
+  name = "YouTube"
+  icon = "fa-brands fa-youtube fa-2x"
+  url = "https://www.youtube.com/@TenForward"
