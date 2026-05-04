@@ -31,10 +31,15 @@ Linuxのコンテナ技術関連の記事、書籍を執筆。
 
 * [Plamo Linux](https://www.plamolinux.org/) メンテナ
 * [linuxcontainers.org](https://linuxcontainers.org/) 関連プロダクト
-  - 翻訳全般（ウェブサイト、コマンド出力、man pages）
+  - 翻訳全般（[ウェブサイト](https://linuxcontainers.org/ja/)、[コマンド出力](https://hosted.weblate.org/projects/incus/cli/ja/)、[man pages](https://linuxcontainers.org/ja/lxc/manpages/)）
   - LXC はコードも一部 contribute
     - [LXCへのコミット[1]](https://gihyo.jp/admin/serial/01/linux_containers/0027)
-	- [LXCへのコミット[2]](https://gihyo.jp/admin/serial/01/linux_containers/0028)
+    - [LXCへのコミット[2]](https://gihyo.jp/admin/serial/01/linux_containers/0028)
+
+# Activities
+
+イベント登壇などの活動については [Events/Slides](/events/) ページをご覧ください。
+
 
 # Community
 
