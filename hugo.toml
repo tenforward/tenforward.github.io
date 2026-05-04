@@ -45,3 +45,9 @@ pagerSize = 10
   name = "YouTube"
   icon = "fa-brands fa-youtube fa-2x"
   url = "https://www.youtube.com/@TenForward"
+
+# Menu
+[[menu.main]]
+  name = "About"
+  weight = 1
+  url = "about/"
