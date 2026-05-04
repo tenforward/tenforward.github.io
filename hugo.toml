@@ -55,3 +55,11 @@ pagerSize = 10
   name = "Activities"
   weight = 2
   url = "activities/"
+[[menu.main]]
+  name = "Blogs"
+  weight = 3
+  url = "blogs/"
+[[menu.main]]
+  name = "Events/Slides"
+  weight = 4
+  url = "events/"
