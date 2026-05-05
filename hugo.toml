@@ -22,6 +22,10 @@ pagerSize = 10
   tag = "tags"
   category = "categories"
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 # Social links
 [[params.social]]
   name = "Github"
