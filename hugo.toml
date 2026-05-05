@@ -18,6 +18,8 @@ pagerSize = 10
   colorScheme = "auto"
   hideColorSchemeToggle = "false"
 
+  customCSS = ["css/jpfont.css"]
+
 [taxonomies]
   tag = "tags"
   category = "categories"
