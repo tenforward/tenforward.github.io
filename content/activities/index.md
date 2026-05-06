@@ -3,12 +3,16 @@ title: Activities
 draft: false
 ---
 
+イベント登壇などの活動については [Events/Slides](/events/) ページをご覧ください。
+
+コンテナ関連の活動が次のページに非常にコンパクトにまとまっています。ご覧ください。
+
+* [Findy Engineer Lab モチベの泉 加藤泰文さん──これがなかったら、ここまで続けてなかった](https://findy-code.io/engineer-lab/ten_forward)
+
 # Writing / Publishing
 
 Linuxのコンテナ技術関連の記事、書籍を執筆。
 
-* [Findy Engineer Lab モチベの泉 加藤泰文さん──これがなかったら、ここまで続けてなかった](https://findy-code.io/engineer-lab/ten_forward)  
-  コンテナ関連の活動がすごくコンパクトにまとまっていますのでぜひご覧ください
 * [LXCで学ぶコンテナ入門 －軽量仮想化環境を実現する技術](https://gihyo.jp/list/group/LXC%E3%81%A7%E5%AD%A6%E3%81%B6%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E5%85%A5%E9%96%80-%E8%BB%BD%E9%87%8F%E4%BB%AE%E6%83%B3%E5%8C%96%E7%92%B0%E5%A2%83%E3%82%92%E5%AE%9F%E7%8F%BE%E3%81%99%E3%82%8B%E6%8A%80%E8%A1%93)（gihyo.jp）  
   2014 年以来続く連載です
 * [Linux Container Book シリーズ](https://techbookfest.org/organization/pps9kSKrNTHELDQfBkBSsJ) （技術書典:lxc-jp）  
@@ -35,10 +39,6 @@ Linuxのコンテナ技術関連の記事、書籍を執筆。
   - LXC はコードも一部 contribute
     - [LXCへのコミット[1]](https://gihyo.jp/admin/serial/01/linux_containers/0027)
     - [LXCへのコミット[2]](https://gihyo.jp/admin/serial/01/linux_containers/0028)
-
-# Activities
-
-イベント登壇などの活動については [Events/Slides](/events/) ページをご覧ください。
 
 
 # Community
